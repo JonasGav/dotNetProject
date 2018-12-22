@@ -29,7 +29,7 @@ namespace dotNetProject
                 var app = scope.Resolve<IParsedData>();
                 app.setData(client.callApi());
                 ApiData.Text = client.getResponse();
-                app.ChangeValues(MessageTextBox, TimestampTextBox, LongitudeTextBox, LatitudeTextBox);
+                app.ChangeValues(MessageTextBox, TimestampTextBox, LongitudeTextBox, LatitudeTextBox,listBox1.SelectedIndex);
             }
 
         }

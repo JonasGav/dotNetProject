@@ -16,6 +16,7 @@ namespace dotNetProject
         IRawTime _RawTime;
 
         public string Timestamp { get; private set; }
+        public string TimestampRaw { get; private set; }
         public string Message { get; private set; }
         public float Longitude { get; private set; }
         public float Latitude { get; private set; }
@@ -28,16 +29,18 @@ namespace dotNetProject
         {
             dynamic parsed = JsonConvert.DeserializeObject  (response.Content);
             Timestamp = _FormatedTime.GetTimestamp(Convert.ToString(parsed.timestamp));
+            TimestampRaw = _RawTime.GetTimestamp(Convert.ToString(parsed.timestamp));
             Message = parsed.message;
             Latitude = parsed.iss_position.latitude;
             Longitude = parsed.iss_position.longitude;
         }
 
         public void ChangeValues(System.Windows.Forms.TextBox messageTextBox, System.Windows.Forms.TextBox timestampTextBox,
-            System.Windows.Forms.TextBox longitudeTextBox, System.Windows.Forms.TextBox latitudeTextBox)
+            System.Windows.Forms.TextBox longitudeTextBox, System.Windows.Forms.TextBox latitudeTextBox, int selectedIndex)
         {
+            //Timestamp = (selectedIndex == 1 ? Timestamp)
             messageTextBox.Text = Message;
-            timestampTextBox.Text = Timestamp;
+            timestampTextBox.Text = (selectedIndex == 1 ? Timestamp : TimestampRaw);
             longitudeTextBox.Text = Longitude.ToString();
             latitudeTextBox.Text = Latitude.ToString();
         }
