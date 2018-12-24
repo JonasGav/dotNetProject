@@ -23,8 +23,6 @@ namespace UnitTestingProject
 
         public MyResult Foo()
         {
-            // NOTE: This code is obviously stupid; it just blocks the thread until the async task completes, which is rather pointless.
-            // It's just an example :)
             MyResult result = null;
             var request = new RestRequest();
             var blocker = new AutoResetEvent(false);
@@ -53,8 +51,8 @@ namespace UnitTestingProject
         {
             Mock<IRestClient> restClient = new Mock<IRestClient>();
             restClient.Setup(c => c.ExecuteAsync<MyResult>(
-                    Moq.It.IsAny<IRestRequest>(),
-                    Moq.It.IsAny<Action<IRestResponse<MyResult>, RestRequestAsyncHandle>>()))
+                    It.IsAny<IRestRequest>(),
+                    It.IsAny<Action<IRestResponse<MyResult>, RestRequestAsyncHandle>>()))
                 .Callback<IRestRequest, Action<IRestResponse<MyResult>, RestRequestAsyncHandle>>((request, callback) =>
                 {
                     var responseMock = new Mock<IRestResponse<MyResult>>();
