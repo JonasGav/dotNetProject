@@ -15,10 +15,8 @@ namespace dotNetProject
 {
     public partial class Form1 : Form
     {
-        RestClientCall client;
         public Form1()
         {
-            client = new RestClientCall();
             InitializeComponent();
         }
         private void GetApi_Click(object sender, EventArgs e)
@@ -26,6 +24,7 @@ namespace dotNetProject
             var container = ContainerConfig.Configure();
             using (var scope = container.BeginLifetimeScope())
             {
+                RestClientCall client = new RestClientCall();
                 var app = scope.Resolve<IParsedData>();
                 app.setData(client.callApi());
                 ApiData.Text = client.getResponse();
