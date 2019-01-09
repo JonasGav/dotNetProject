@@ -70,26 +70,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
-    <Compile Include="ContainerConfig.cs" />
-    <Compile Include="HttpClientManual.cs" />
-    <Compile Include="IParsedData.cs" />
-    <Compile Include="RestClientCall.cs" />
-    <Compile Include="Test.cs" />
-    <Compile Include="Time\RawTime.cs" />
-    <Compile Include="Time\FormatedTime.cs" />
-    <Compile Include="Time\IFormatedTime.cs" />
-    <Compile Include="Time\IRawTime.cs" />
-    <Compile Include="ParsedData.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Backend\ContainerConfig.cs" />
+    <Compile Include="Backend\HttpClientCall.cs" />
+    <Compile Include="Backend\IParsedData.cs" />
+    <Compile Include="Backend\RestClientCall.cs" />
+    <Compile Include="Backend\Time\RawTime.cs" />
+    <Compile Include="Backend\Time\FormatedTime.cs" />
+    <Compile Include="Backend\Time\IFormatedTime.cs" />
+    <Compile Include="Backend\Time\IRawTime.cs" />
+    <Compile Include="Backend\ParsedData.cs" />
+    <Compile Include="Frontend\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Frontend\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Frontend\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Autofac;
+using dotNetProject.Backend;
 using dotNetProject.Time;
 using RestSharp;
 
@@ -24,11 +25,15 @@ namespace dotNetProject
             var container = ContainerConfig.Configure();
             using (var scope = container.BeginLifetimeScope())
             {
-                RestClientCall client = new RestClientCall();
+                //RestClientCall client = new RestClientCall();
+                HttpClientCall httpClient = new HttpClientCall();
                 var app = scope.Resolve<IParsedData>();
-                app.setData(client.callApi());
-                ApiData.Text = client.getResponse();
-                app.ChangeValues(MessageTextBox, TimestampTextBox, LongitudeTextBox, LatitudeTextBox,listBox1.SelectedIndex);
+                //app.setData(client.callApi());
+                var t = Task.Run(() => HttpClientCall.CustomExceptionCallAsync());
+                t.Wait();
+                app.HttpSetData(t.Result, MessageTextBox, TimestampTextBox, LongitudeTextBox, LatitudeTextBox, listBox1.SelectedIndex);
+                ApiData.Text = t.Result;
+                //app.ChangeValues(MessageTextBox, TimestampTextBox, LongitudeTextBox, LatitudeTextBox,listBox1.SelectedIndex);
             }
 
         }
