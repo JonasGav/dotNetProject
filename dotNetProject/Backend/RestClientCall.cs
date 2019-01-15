@@ -32,9 +32,5 @@ namespace dotNetProject
             }
             return JsonConvert.DeserializeObject (_restResponse.Content);
          } 
-        public void changeUrl(string Url)
-        {
-
-        }
     }// http://api.geonames.org/
 }// http://api.geonames.org/countryCode?lat=47.03&lng=10.2&username=demo 

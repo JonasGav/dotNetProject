@@ -47,10 +47,10 @@
             // 
             // GetApi
             // 
-            this.GetApi.Location = new System.Drawing.Point(19, 186);
+            this.GetApi.Location = new System.Drawing.Point(35, 301);
             this.GetApi.Margin = new System.Windows.Forms.Padding(2);
             this.GetApi.Name = "GetApi";
-            this.GetApi.Size = new System.Drawing.Size(163, 38);
+            this.GetApi.Size = new System.Drawing.Size(304, 38);
             this.GetApi.TabIndex = 0;
             this.GetApi.Text = "Get data";
             this.GetApi.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // MessageLabel
             // 
             this.MessageLabel.AutoSize = true;
-            this.MessageLabel.Location = new System.Drawing.Point(26, 74);
+            this.MessageLabel.Location = new System.Drawing.Point(54, 128);
             this.MessageLabel.Name = "MessageLabel";
             this.MessageLabel.Size = new System.Drawing.Size(50, 13);
             this.MessageLabel.TabIndex = 2;
@@ -68,7 +68,7 @@
             // TimestampLabel
             // 
             this.TimestampLabel.AutoSize = true;
-            this.TimestampLabel.Location = new System.Drawing.Point(18, 100);
+            this.TimestampLabel.Location = new System.Drawing.Point(46, 154);
             this.TimestampLabel.Name = "TimestampLabel";
             this.TimestampLabel.Size = new System.Drawing.Size(58, 13);
             this.TimestampLabel.TabIndex = 3;
@@ -77,7 +77,7 @@
             // LatitudeLabel
             // 
             this.LatitudeLabel.AutoSize = true;
-            this.LatitudeLabel.Location = new System.Drawing.Point(31, 126);
+            this.LatitudeLabel.Location = new System.Drawing.Point(59, 180);
             this.LatitudeLabel.Name = "LatitudeLabel";
             this.LatitudeLabel.Size = new System.Drawing.Size(45, 13);
             this.LatitudeLabel.TabIndex = 4;
@@ -86,7 +86,7 @@
             // LongitudeLabel
             // 
             this.LongitudeLabel.AutoSize = true;
-            this.LongitudeLabel.Location = new System.Drawing.Point(22, 152);
+            this.LongitudeLabel.Location = new System.Drawing.Point(50, 206);
             this.LongitudeLabel.Name = "LongitudeLabel";
             this.LongitudeLabel.Size = new System.Drawing.Size(54, 13);
             this.LongitudeLabel.TabIndex = 5;
@@ -94,28 +94,28 @@
             // 
             // MessageTextBox
             // 
-            this.MessageTextBox.Location = new System.Drawing.Point(82, 74);
+            this.MessageTextBox.Location = new System.Drawing.Point(110, 128);
             this.MessageTextBox.Name = "MessageTextBox";
             this.MessageTextBox.Size = new System.Drawing.Size(100, 20);
             this.MessageTextBox.TabIndex = 6;
             // 
             // TimestampTextBox
             // 
-            this.TimestampTextBox.Location = new System.Drawing.Point(82, 100);
+            this.TimestampTextBox.Location = new System.Drawing.Point(110, 154);
             this.TimestampTextBox.Name = "TimestampTextBox";
             this.TimestampTextBox.Size = new System.Drawing.Size(100, 20);
             this.TimestampTextBox.TabIndex = 7;
             // 
             // LatitudeTextBox
             // 
-            this.LatitudeTextBox.Location = new System.Drawing.Point(82, 126);
+            this.LatitudeTextBox.Location = new System.Drawing.Point(110, 180);
             this.LatitudeTextBox.Name = "LatitudeTextBox";
             this.LatitudeTextBox.Size = new System.Drawing.Size(100, 20);
             this.LatitudeTextBox.TabIndex = 8;
             // 
             // LongitudeTextBox
             // 
-            this.LongitudeTextBox.Location = new System.Drawing.Point(82, 152);
+            this.LongitudeTextBox.Location = new System.Drawing.Point(110, 206);
             this.LongitudeTextBox.Name = "LongitudeTextBox";
             this.LongitudeTextBox.Size = new System.Drawing.Size(100, 20);
             this.LongitudeTextBox.TabIndex = 9;
@@ -126,7 +126,7 @@
             this.listBox1.Items.AddRange(new object[] {
             "Raw Timestamp",
             "Formated Timestamp"});
-            this.listBox1.Location = new System.Drawing.Point(197, 100);
+            this.listBox1.Location = new System.Drawing.Point(231, 154);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 30);
             this.listBox1.TabIndex = 12;
@@ -134,7 +134,7 @@
             // Country
             // 
             this.Country.AutoSize = true;
-            this.Country.Location = new System.Drawing.Point(4, 51);
+            this.Country.Location = new System.Drawing.Point(32, 105);
             this.Country.Name = "Country";
             this.Country.Size = new System.Drawing.Size(72, 13);
             this.Country.TabIndex = 13;
@@ -144,7 +144,7 @@
             // CountryTag
             // 
             this.CountryTag.AutoSize = true;
-            this.CountryTag.Location = new System.Drawing.Point(12, 26);
+            this.CountryTag.Location = new System.Drawing.Point(40, 80);
             this.CountryTag.Name = "CountryTag";
             this.CountryTag.Size = new System.Drawing.Size(61, 13);
             this.CountryTag.TabIndex = 14;
@@ -152,14 +152,14 @@
             // 
             // CountryTagTxt
             // 
-            this.CountryTagTxt.Location = new System.Drawing.Point(82, 23);
+            this.CountryTagTxt.Location = new System.Drawing.Point(110, 77);
             this.CountryTagTxt.Name = "CountryTagTxt";
             this.CountryTagTxt.Size = new System.Drawing.Size(100, 20);
             this.CountryTagTxt.TabIndex = 15;
             // 
             // CountryNameTxt
             // 
-            this.CountryNameTxt.Location = new System.Drawing.Point(82, 48);
+            this.CountryNameTxt.Location = new System.Drawing.Point(110, 102);
             this.CountryNameTxt.Name = "CountryNameTxt";
             this.CountryNameTxt.Size = new System.Drawing.Size(100, 20);
             this.CountryNameTxt.TabIndex = 16;
@@ -167,11 +167,11 @@
             // ErrorTxt
             // 
             this.ErrorTxt.AutoSize = true;
-            this.ErrorTxt.Location = new System.Drawing.Point(79, 261);
+            this.ErrorTxt.Location = new System.Drawing.Point(160, 9);
             this.ErrorTxt.Name = "ErrorTxt";
-            this.ErrorTxt.Size = new System.Drawing.Size(0, 13);
+            this.ErrorTxt.Size = new System.Drawing.Size(50, 13);
             this.ErrorTxt.TabIndex = 17;
-            this.ErrorTxt.Click += new System.EventHandler(this.ErrorTxt_Click);
+            this.ErrorTxt.Text = "No errors";
             // 
             // Form1
             // 

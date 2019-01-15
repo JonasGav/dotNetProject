@@ -44,10 +44,10 @@ namespace UnitTestingProject
         public string Name { get; set; }
     }
     [TestClass]
-    public class RestClientCallTest
+    public class RestClientTest
     {
         [TestMethod]
-        public void TestMethod1() 
+        public void TestMethod2()
         {
             Mock<IRestClient> restClient = new Mock<IRestClient>();
             restClient.Setup(c => c.ExecuteAsync<MyResult>(
