@@ -73,6 +73,7 @@
     <Compile Include="Backend\ContainerConfig.cs" />
     <Compile Include="Backend\HttpClientCall.cs" />
     <Compile Include="Backend\IParsedData.cs" />
+    <Compile Include="Backend\IRestClientCall.cs" />
     <Compile Include="Backend\RestClientCall.cs" />
     <Compile Include="Backend\Time\RawTime.cs" />
     <Compile Include="Backend\Time\FormatedTime.cs" />

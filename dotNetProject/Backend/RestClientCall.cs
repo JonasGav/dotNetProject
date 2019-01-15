@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,22 +9,32 @@ using System.Threading.Tasks;
 
 namespace dotNetProject
 {
-    public class RestClientCall
+    public class RestClientCall : IRestClientCall
     {
          IRestClient _restClient;
          IRestResponse _restResponse;
-         public RestClientCall()
+         public RestClientCall(string Url)
          {
-             _restClient = new RestClient("http://api.open-notify.org/iss-now.json");
-             _restResponse =  _restClient.Execute(new RestRequest());
+             _restClient = new RestClient(Url);
          }
-         public IRestResponse callApi()
+         public dynamic callApi(bool parameters = false, string parLong = null, string parLat = null)
          {
-             return _restResponse;
+            if (!parameters) _restResponse = _restClient.Execute(new RestRequest());
+            else
+            {
+                var request = new RestRequest("countryCode?", Method.GET);
+                request.AddParameter("lat", parLat);
+                request.AddParameter("lng", parLong);
+                request.AddParameter("type", "JSON");
+                request.AddParameter("username", "Whatifjohnyhere");
+                _restResponse = _restClient.Execute(request);
+
+            }
+            return JsonConvert.DeserializeObject (_restResponse.Content);
          } 
-         public string getResponse()
-         {
-             return _restResponse.Content;
-         }
-    }
-}
+        public void changeUrl(string Url)
+        {
+
+        }
+    }// http://api.geonames.org/
+}// http://api.geonames.org/countryCode?lat=47.03&lng=10.2&username=demo 

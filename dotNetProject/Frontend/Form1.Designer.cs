@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.GetApi = new System.Windows.Forms.Button();
-            this.ApiData = new System.Windows.Forms.TextBox();
             this.MessageLabel = new System.Windows.Forms.Label();
             this.TimestampLabel = new System.Windows.Forms.Label();
             this.LatitudeLabel = new System.Windows.Forms.Label();
@@ -38,8 +37,12 @@
             this.TimestampTextBox = new System.Windows.Forms.TextBox();
             this.LatitudeTextBox = new System.Windows.Forms.TextBox();
             this.LongitudeTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Country = new System.Windows.Forms.Label();
+            this.CountryTag = new System.Windows.Forms.Label();
+            this.CountryTagTxt = new System.Windows.Forms.TextBox();
+            this.CountryNameTxt = new System.Windows.Forms.TextBox();
+            this.ErrorTxt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GetApi
@@ -52,15 +55,6 @@
             this.GetApi.Text = "Get data";
             this.GetApi.UseVisualStyleBackColor = true;
             this.GetApi.Click += new System.EventHandler(this.GetApi_Click);
-            // 
-            // ApiData
-            // 
-            this.ApiData.Location = new System.Drawing.Point(82, 15);
-            this.ApiData.Margin = new System.Windows.Forms.Padding(2);
-            this.ApiData.Multiline = true;
-            this.ApiData.Name = "ApiData";
-            this.ApiData.Size = new System.Drawing.Size(269, 54);
-            this.ApiData.TabIndex = 1;
             // 
             // MessageLabel
             // 
@@ -126,15 +120,6 @@
             this.LongitudeTextBox.Size = new System.Drawing.Size(100, 20);
             this.LongitudeTextBox.TabIndex = 9;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Raw JSON";
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -146,13 +131,59 @@
             this.listBox1.Size = new System.Drawing.Size(120, 30);
             this.listBox1.TabIndex = 12;
             // 
+            // Country
+            // 
+            this.Country.AutoSize = true;
+            this.Country.Location = new System.Drawing.Point(4, 51);
+            this.Country.Name = "Country";
+            this.Country.Size = new System.Drawing.Size(72, 13);
+            this.Country.TabIndex = 13;
+            this.Country.Text = "Country name";
+            this.Country.Click += new System.EventHandler(this.Country_Click);
+            // 
+            // CountryTag
+            // 
+            this.CountryTag.AutoSize = true;
+            this.CountryTag.Location = new System.Drawing.Point(12, 26);
+            this.CountryTag.Name = "CountryTag";
+            this.CountryTag.Size = new System.Drawing.Size(61, 13);
+            this.CountryTag.TabIndex = 14;
+            this.CountryTag.Text = "Country tag";
+            // 
+            // CountryTagTxt
+            // 
+            this.CountryTagTxt.Location = new System.Drawing.Point(82, 23);
+            this.CountryTagTxt.Name = "CountryTagTxt";
+            this.CountryTagTxt.Size = new System.Drawing.Size(100, 20);
+            this.CountryTagTxt.TabIndex = 15;
+            // 
+            // CountryNameTxt
+            // 
+            this.CountryNameTxt.Location = new System.Drawing.Point(82, 48);
+            this.CountryNameTxt.Name = "CountryNameTxt";
+            this.CountryNameTxt.Size = new System.Drawing.Size(100, 20);
+            this.CountryNameTxt.TabIndex = 16;
+            // 
+            // ErrorTxt
+            // 
+            this.ErrorTxt.AutoSize = true;
+            this.ErrorTxt.Location = new System.Drawing.Point(79, 261);
+            this.ErrorTxt.Name = "ErrorTxt";
+            this.ErrorTxt.Size = new System.Drawing.Size(0, 13);
+            this.ErrorTxt.TabIndex = 17;
+            this.ErrorTxt.Click += new System.EventHandler(this.ErrorTxt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 366);
+            this.Controls.Add(this.ErrorTxt);
+            this.Controls.Add(this.CountryNameTxt);
+            this.Controls.Add(this.CountryTagTxt);
+            this.Controls.Add(this.CountryTag);
+            this.Controls.Add(this.Country);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.LongitudeTextBox);
             this.Controls.Add(this.LatitudeTextBox);
             this.Controls.Add(this.TimestampTextBox);
@@ -161,7 +192,6 @@
             this.Controls.Add(this.LatitudeLabel);
             this.Controls.Add(this.TimestampLabel);
             this.Controls.Add(this.MessageLabel);
-            this.Controls.Add(this.ApiData);
             this.Controls.Add(this.GetApi);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -174,7 +204,6 @@
         #endregion
 
         private System.Windows.Forms.Button GetApi;
-        private System.Windows.Forms.TextBox ApiData;
         private System.Windows.Forms.Label MessageLabel;
         private System.Windows.Forms.Label TimestampLabel;
         private System.Windows.Forms.Label LatitudeLabel;
@@ -183,7 +212,11 @@
         private System.Windows.Forms.TextBox TimestampTextBox;
         private System.Windows.Forms.TextBox LatitudeTextBox;
         private System.Windows.Forms.TextBox LongitudeTextBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label Country;
+        private System.Windows.Forms.Label CountryTag;
+        private System.Windows.Forms.TextBox CountryTagTxt;
+        private System.Windows.Forms.TextBox CountryNameTxt;
+        private System.Windows.Forms.Label ErrorTxt;
     }
 }
